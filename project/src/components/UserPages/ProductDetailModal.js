@@ -111,7 +111,7 @@ const ProductDetailModal = (props) => {
               <div className="mb-4">
                 <h3 className="font-weight-bold">{props.dataProduct.name}</h3>
                 <p className="my-0 text-success-s2 font-weight-bold">
-                  ${props.dataProduct.price}
+                  ₦{(props.dataProduct.price)*500}
                 </p>
                 <small className="card-text text-secondary">
                   Stock : {props.dataProduct.quantity}

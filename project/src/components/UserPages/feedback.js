@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import logo from "../../assets/complogo.png";
-
+import Footer from "./Footer";
+import './css/footer.css';
 import './css/feedback.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faShoppingCart, faCheck, faUser,faSearch,faQuestionCircle, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,7 @@ const Feedback = () => {
     return (
         <div>
         
-        <nav className="navbar fixed-top navbar-transparent navbar-expand-lg navbar-light">
+        <nav className="navbar static-top navbar-transparent navbar-expand-lg navbar-light">
           <div className="container">
             <a className="navbar-brand" href="/">
               <img src={logo} className="logo-fx" alt="..." />
@@ -111,7 +112,7 @@ const Feedback = () => {
 
 
 
-            <div className="testimonial1 py-5">
+            <div className="testimonial1 py-5 mt-2">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8 text-center">
@@ -123,7 +124,7 @@ const Feedback = () => {
           <div className="row owl-carousel owl-theme testi1 mt-4">
             {/* item */}
             <div className="item col-md-6">
-              <div className="card card-shadow border-0 mb-4">
+              <div className="card card-shadow border-1 mb-4">
                 <div className="card-body">
                   <div className="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/testimonial/1.jpg" alt="wrapkit" className="thumb-img position-absolute rounded-circle" /> Chinonye Joseph</div>
                   <h5 className="font-weight-light">WebVilla has the best customer service I've seen. Very pleasant staff and issues are resolved quickly.</h5>
@@ -135,7 +136,7 @@ const Feedback = () => {
             {/* item */}
             {/* item */}
             <div className="item col-md-6">
-              <div className="card card-shadow border-0 mb-4">
+              <div className="card card-shadow border-1 mb-4">
                 <div className="card-body">
                   <div className="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/testimonial/2.jpg" alt="wrapkit" className="thumb-img position-absolute rounded-circle" /> Michelle Anderson</div>
                   <h5 className="font-weight-light">Get the trendiest clothes at the most affordable prices on Webvilla. My go-to shop!</h5>
@@ -147,7 +148,7 @@ const Feedback = () => {
             {/* item */}
             {/* item */}
             <div className="item col-md-6">
-              <div className="card card-shadow border-0 mb-4">
+              <div className="card card-shadow border-1 mb-4">
                 <div className="card-body">
                   <div className="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/testimonial/3.jpg" alt="wrapkit" className="thumb-img position-absolute rounded-circle" /> Dennis Coker</div>
                   <h5 className="font-weight-light">I shop here almost every month. WebVilla clothes or nothing.</h5>
@@ -159,9 +160,9 @@ const Feedback = () => {
             {/* item */}
             {/* item */}
             <div className="item col-md-6">
-              <div className="card card-shadow border-0 mb-4">
+              <div className="card card-shadow border-1 mb-4">
                 <div className="card-body">
-                  <div className="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/testimonial/1.jpg" alt="wrapkit" className="thumb-img position-absolute rounded-circle" /> Mide Olatunji</div>
+                  <div className="position-relative thumb bg-success-gradiant d-inline-block text-white mb-4"><img src="bp1.jpg" alt="wrapkit" className="thumb-img position-absolute rounded-circle" /> Mide Olatunji</div>
                   <h5 className="font-weight-light">A moderately sized clothing store. Anything you're looking for in terms of fashion can be found here.</h5>
                   <span className="devider d-inline-block my-3" />
                   <h6 className="font-weight-normal">Ikeja, Lagos.</h6>
@@ -180,7 +181,7 @@ const Feedback = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="card-shadow">
-                                    <img src="images/2.jpg" className="img-fluid" alt="" />
+                                    <img src="2.jpg" className="img-fluid" alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-6">
@@ -221,7 +222,7 @@ const Feedback = () => {
                                         <div className="col-lg-4 col-md-4 bg-light">
                                             <div className="card-body d-flex align-items-center bg-light">
                                                 <div className="mr-3 align-self-center bg-light">
-                                                    <img src="images/icon1.png" alt="" />
+                                                    <img src="icon1.png" alt="" />
                                                 </div>
                                                 <div className="bg-light">
                                                     <h6 className="font-weight-medium">Address</h6>
@@ -233,7 +234,7 @@ const Feedback = () => {
                                         <div className="col-lg-4 col-md-4">
                                             <div className="card-body d-flex align-items-center c-detail bg-light">
                                                 <div className="mr-3 align-self-center">
-                                                    <img src="images/icon2.png" alt="" />
+                                                    <img src="icon2.png" alt="" />
                                                 </div>
                                                 <div >
                                                     <h6 className="font-weight-medium">Phone</h6>
@@ -245,7 +246,7 @@ const Feedback = () => {
                                         <div className="col-lg-4 col-md-4">
                                             <div className="card-body d-flex align-items-center c-detail bg-light">
                                                 <div className="mr-3 align-self-center">
-                                                    <img src="images/icon3.png" alt="" />
+                                                    <img src="icon3.png" alt="" />
                                                 </div>
                                                 <div>
                                                     <h6 className="font-weight-medium">Email</h6>
@@ -260,10 +261,13 @@ const Feedback = () => {
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
                 </div>
             </div>
+          
         </div>
+        <Footer />
         </div>
     );
 }

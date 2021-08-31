@@ -19,7 +19,8 @@ class Carousel extends React.Component {
       autoplaySpeed: 4000,
     };
     return (
-      <Slider {...settings}>
+      <div className="container mt-5">
+      <Slider {...settings} >
         <div className="d-flex justify-content-center">
           <img src={Brochure} style={{ width: "90%" }} alt="..." />
         </div>
@@ -39,6 +40,7 @@ class Carousel extends React.Component {
           <img src={Brochure3} style={{ width: "90%" }} alt="..." />
         </div>
       </Slider>
+      </div>
     );
   }
 }

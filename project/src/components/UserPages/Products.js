@@ -80,7 +80,7 @@ const Products = (props) => {
           arrayDataProduct.map((item, index) => {
             return (
               <div className="col-md-4 mt-4" key={index}>
-                <div className="card">
+                <div className="card d-flex flex-fill h-100">
                   <div
                     className="product-showdetail"
                     // kalau tanpa ()=> nanti ulang render terus ga bisa jalan
@@ -103,11 +103,13 @@ const Products = (props) => {
                     <br />
                     <div className="d-flex d-row mt-4">
                       <p className="my-0 text-success-s2 font-weight-bold">
-                        ${item.price}
+                        ₦{(item.price)*500}
                       </p>
+                      </div>
+                    <div className="d-flex d-row mt-4">
                       <button
                         onClick={() => inputCart(item)}
-                        className="btn btn-outline-success d-flex d-row ml-auto"
+                        className="btn btn-outline-success d-flex d-row"
                       >
                         <i className="fas fa-cart-plus align-self-center mr-2 fa-sm" />
                         <small className="font-weight-bold">Cart</small>
@@ -131,7 +133,7 @@ const Products = (props) => {
                   className="text-success-s2 text-center"
                   style={{ marginTop: "-25px" }}
                 >
-                  Sorry, it seems the clothe that you search not found.
+                  Sorry, it seems the clothing item that you searched for is not found.
                 </h5>
               </div>
             )}

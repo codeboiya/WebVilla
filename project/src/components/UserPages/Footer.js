@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logoHead from "../../assets/complogo.png";
+import AboutPage from "./AboutDeveloper";
 import './css/footer.css';
 import { toast } from "react-toastify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,8 +8,8 @@ import { faFacebook, faTwitter, faWhatsapp, faInstagram } from '@fortawesome/fre
 
 const Footer=()=>{
   return(
-<div>
-          <footer id="dk-footer" className="dk-footer">
+<div className="footerbody">
+          {/* <footer id="dk-footer" className="dk-footer">
               <div className="container">
                   <div className="row">
                       <div className="col-md-12 col-lg-4">
@@ -50,15 +51,15 @@ const Footer=()=>{
                                       </li>
                                   </ul>
                               </div>
-                              {/* End Social link */}
+                              
                           </div>
-                          {/* End Footer info */}
+                          
                           <div className="footer-awarad">
                               <img src="images/icon/best.png" alt="" />
                             
                           </div>
                       </div>
-                      {/* End Col */}
+                      
                       <div className="col-md-12 col-lg-8">
                           <div className="row">
                               <div className="col-md-6">
@@ -66,33 +67,33 @@ const Footer=()=>{
                                       <div className="contact-icon">
                                           <i className="fa fa-map-o" aria-hidden="true" style={{ marginTop: '20px' }} />
                                       </div>
-                                      {/* End contact Icon */}
+                                      
                                       <div className="contact-info">
                                           <h3>Surulere, Lagos</h3>
                                           <p className="footp">148/150 Bode Thomas Street</p>
                                       </div>
-                                      {/* End Contact Info */}
+                            
                                   </div>
-                                  {/* End Contact Us */}
+                                  
                               </div>
-                              {/* End Col */}
+                              
                               <div className="col-md-6">
                                   <div className="contact-us contact-us-last">
                                       <div className="contact-icon">
                                           <i className="fa fa-volume-control-phone" aria-hidden="true" style={{marginTop:'20px'}} />
                                       </div>
-                                      {/* End contact Icon */}
+                                      
                                       <div className="contact-info">
                                           <h3>123 456 789</h3>
                                           <p className="footp">Give us a call</p>
                                       </div>
-                                      {/* End Contact Info */}
+                                      
                                   </div>
-                                  {/* End Contact Us */}
+                                  
                               </div>
-                              {/* End Col */}
+                        
                           </div>
-                          {/* End Contact Row */}
+                          
                           <div className="row">
                               <div className="col-md-12 col-lg-6">
                                   <div className="footer-widget footer-left-widget">
@@ -129,16 +130,16 @@ const Footer=()=>{
                                           </li>
                                       </ul>
                                   </div>
-                                  {/* End Footer Widget */}
+                                  
                               </div>
-                              {/* End col */}
+                              
                               <div className="col-md-12 col-lg-6">
                                   <div className="footer-widget">
                                       <div className="section-heading">
                                           <h3>Subscribe</h3>
                                           <span className="animate-border border-black" />
                                       </div>
-                                      <p className="footp">{/* Don’t miss to subscribe to our new feeds, kindly fill the form below. */}
+                                      <p className="footp">
                                           WebVilla is here for you always. Wouldn't you like to hear more from us?</p>
                                       <form action="#">
                                           <div className="form-row">
@@ -150,26 +151,23 @@ const Footer=()=>{
                                               </div>
                                           </div>
                                       </form>
-                                      {/* End form */}
+        
                                   </div>
-                                  {/* End footer widget */}
+                                  
                               </div>
-                              {/* End Col */}
-                          </div>
-                          {/* End Row */}
-                      </div>
-                      {/* End Col */}
+                          </div
+                      </di
                   </div>
-                  {/* End Widget Row */}
+            
               </div>
-              {/* End Contact Container */}
+              
               <div className="copyright">
                   <div className="container">
                       <div className="row">
                           <div className="col-md-6">
                               <span>Copyright © 2021, All Right Reserved WebVilla</span>
                           </div>
-                          {/* End Col */}
+                          
                           <div className="col-md-6">
                               <div className="copyright-menu">
                                   <ul>
@@ -188,14 +186,81 @@ const Footer=()=>{
                                   </ul>
                               </div>
                           </div>
-                          {/* End col */}
+                          
                       </div>
-                      {/* End Row */}
+                    
                   </div>
-                  {/* End Copyright Container */}
+                  
               </div>
-              {/* End Copyright */}
+              
 
+          </footer> */}
+
+          <footer>
+              <div className="container pt-5 border-bottom">
+                  <div className="row">
+                      <div className="mb-5 align-content-center float-left">
+                          <a href="#"><img src="complogo.png" classname="img-thumbnail" width="60%" /></a>
+                      </div>
+                      <div className="col-md-9 col-sm-12">
+                          <div className="col-md-3 col-sm-6 col-6 p-0 float-left mb-3 ml-2">
+                              <h5 className="mb-3 font-weight-bold text-uppercase">More Links</h5>
+                              <span className="mb-4 animate-border border-black" />
+                              <ul className="list-group">
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#">Cart</a></li>
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#">Feedback</a></li>
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#">Services</a></li>
+                              </ul>
+                          </div>
+                          {/* <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left ml-2">
+                        <h5 class="mb-3 font-weight-bold text-uppercase">Developers</h5>
+                        <span class="mb-4 animate-border border-black"></span>
+                        <ul class="list-group">
+                            <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a
+                                    href="https://github.com/naologic">Open Source</a></li>
+                            <li class="list-group-item bg-transparent border-0 p-0 mb-2"><a
+                                    href="https://stackshare.io/naologic">Technology</a></li>
+                        </ul>
+                    </div> */}
+                          <div className="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left ml-2">
+                              <h5 className="mb-3 font-weight-bold text-uppercase">Company</h5>
+                              <span className="mb-4 animate-border border-black" />
+                              <ul className="list-group">
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#">About</a></li>
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2"><a href="#"> Blog</a></li>
+                              </ul>
+                          </div>
+                          <div className="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left ml-2">
+                              <h5 className="mb-3 font-weight-bold text-uppercase">Connect</h5>
+                              <span className="mb-4 animate-border border-black" />
+                              <ul className="list-group">
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                                      <a href="https://www.linkedin.com/in/anjolaoluwa-olutomilayo/"><i className="fa fa-linkedin mr-1" />
+                                          LinkedIn</a>
+                                  </li>
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                                      <a href="https://github.com/anjielayo" target="_blank"><i className="fa fa-github mr-1" />
+                                          Github</a>
+                                  </li>
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                                      <a href="#" target="_blank"><i className="fa fa-facebook mr-1" /> Facebook</a>
+                                  </li>
+                                  <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                                      <a href="#" target="_blank"><i className="fa fa-youtube mr-1" /> YouTube</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div className="col-md-12">
+                          <div className="py-4 d-flex justify-content-center align-items-center">
+                              <a className="mr-4">Copyright © 2021, All Right Reserved WebVilla</a>
+                              <a className="mr-4" href="#">Home</a>
+                              <a className="mr-4" href="#">Privacy Policy</a>
+                              <a className="mr-4" href="#">Terms &amp; Conditions</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </footer>
 </div>)
 }

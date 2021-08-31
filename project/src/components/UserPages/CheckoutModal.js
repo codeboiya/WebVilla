@@ -48,7 +48,7 @@ const CheckoutModal = (props) => {
               className=" p-3 text-center text-success-s2"
               style={{ border: "2.5px dashed #009e7f" }}
             >
-              Thankyou <b>{userData.username}</b>, your order has been received.
+              Thank you <b>{userData.username}</b>, your order has been received.
             </p>
           </div>
           <div className="d-flex justify-content-center mt-4">
@@ -63,7 +63,7 @@ const CheckoutModal = (props) => {
             <p className="text-center text-secondary my-0">
               Total: <br />
               <span className="font-weight-bold text-dark">
-                ${props.subTotalPrice + 5}
+                ₦{props.subTotalPrice + 1000}
               </span>
             </p>
             <div
@@ -150,7 +150,7 @@ const CheckoutModal = (props) => {
                           </div>
                           <div className="col-md-3 text-right pr-0">
                             <p className="text-success-s2 mb-0 mt-2 font-weight-bold">
-                              ${item.price * item.qtyBuy}
+                              ₦{(item.price*500) * item.qtyBuy}
                             </p>
                           </div>
                         </div>
@@ -163,7 +163,7 @@ const CheckoutModal = (props) => {
                   <td> SubTotal:</td>
                   <td>
                     <b className="text-success-s2 font-weight-bold">
-                      ${props.subTotalPrice}
+                      ₦{props.subTotalPrice}
                     </b>
                   </td>
                 </tr>
@@ -171,7 +171,7 @@ const CheckoutModal = (props) => {
                   <th scope="row">7</th>
                   <td> Shipping:</td>
                   <td>
-                    <b className="text-success-s2 font-weight-bold">$5 </b>
+                    <b className="text-success-s2 font-weight-bold">₦1000 </b>
                   </td>
                 </tr>
                 <tr>
@@ -198,7 +198,7 @@ const CheckoutModal = (props) => {
                   </td>
                   <td style={{ fontSize: "1.1rem" }}>
                     <b className="text-success-s2">
-                      ${props.subTotalPrice + 5}
+                      ₦{props.subTotalPrice + 1000}
                     </b>
                   </td>
                 </tr>
@@ -212,8 +212,8 @@ const CheckoutModal = (props) => {
           <div>
             <h6 className="text-success-s2 my-0">
               Thank you for being our valued customer. We are so grateful for
-              the pleasure of serving you and hope you enjoy your experience at
-              our website, hope you come back soon!
+              the pleasure of serving you and we hope you enjoy your experience at
+              our website, we hope you come back soon!
             </h6>
           </div>
         </div>

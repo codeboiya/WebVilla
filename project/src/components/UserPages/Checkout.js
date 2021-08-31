@@ -257,7 +257,7 @@ const Checkout = (props) => {
                           </div>
                           <div className="col-md-3 text-right pr-0">
                             <p className="text-success-s2 mb-0 mt-2 font-weight-bold">
-                              ${item.price * item.qtyBuy}
+                              ₦{(item.price*500) * item.qtyBuy}
                             </p>
                           </div>
                         </div>
@@ -290,10 +290,10 @@ const Checkout = (props) => {
                     </div>
                     <div className="col-md-5 pl-0 text-right">
                       <p className="text-success-s2 my-0 font-weight-bold">
-                        ${props.subTotalPrice}
+                        ₦{props.subTotalPrice*500}
                       </p>
                       <p className="text-success-s2 mb-0 mt-2 font-weight-bold">
-                        $5
+                        ₦1000
                       </p>
                     </div>
                   </div>
@@ -313,7 +313,7 @@ const Checkout = (props) => {
                     </div>
                     <div className="col-md-5 pl-0 text-right">
                       <h5 className="text-success-s2 my-0 font-weight-bold">
-                        ${props.subTotalPrice + 5}
+                        ₦{(props.subTotalPrice*500) + 1000}
                       </h5>
                     </div>
                   </div>
@@ -402,7 +402,7 @@ const Checkout = (props) => {
         showCheckoutModal={showCheckoutModal}
         unDisplayCheckoutModal={unDisplayCheckoutModal}
         dataInputCheckout={dataInputCheckout}
-        subTotalPrice={props.subTotalPrice}
+        subTotalPrice={props.subTotalPrice*500}
       />
     </div>
   );

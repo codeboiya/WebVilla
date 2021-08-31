@@ -44,7 +44,7 @@ const Login = (props) => {
   // CustomId = only can show 1.
   const customId = "custom-id-yes";
   const registerSuccessToastifyNotif = () => {
-    toast.success(`${props.registerSuccessToastifyNotif.message}`, {
+    toast.success("Successfully created an account!", {
       position: toast.POSITION.TOP_CENTER,
       toastId: customId,
       autoClose: 2500,
@@ -54,7 +54,7 @@ const Login = (props) => {
   };
 
   const comingSoonNotification = () => {
-    toast.success("This Feature will coming soon, Stay tune!", {
+    toast.success("This Feature will come soon, Stay tuned!", {
       position: toast.POSITION.TOP_CENTER,
     });
   };
@@ -192,9 +192,9 @@ const Login = (props) => {
                     </button>
                   </div>
 
-                  <p style={{ fontSize: "1rem", margin: "0.7rem 0rem" }}>or</p>
+                  {/* <p style={{ fontSize: "1rem", margin: "0.7rem 0rem" }}>or</p> */}
 
-                  <div>
+                  {/* <div>
                     {/* <button
                       onClick={comingSoonNotification}
                       className="btn btn-primary w-100 d-flex d-row justify-content-center mb-2"
@@ -203,7 +203,7 @@ const Login = (props) => {
                       <i className="fab fa-facebook-square fa-lg align-self-center mr-3" />
                       Login with Facebook
                     </button> */}
-                    <FacebookLogin getDataUserFacebook={getDataUserFacebook} />
+                    {/*<FacebookLogin getDataUserFacebook={getDataUserFacebook} />
                     <button
                       type="button"
                       onClick={comingSoonNotification}
@@ -213,7 +213,7 @@ const Login = (props) => {
                       <i className="fab fa-google fa-lg align-self-center mr-3" />
                       Login with Google
                     </button>
-                  </div>
+                  </div> */}
 
                   <p style={{ fontSize: "1rem", margin: "0.7rem 0rem" }}>
                     Don't have any account?
@@ -317,7 +317,7 @@ const Login = (props) => {
                       className="text-secondary"
                       style={{ fontSize: "0.75rem", margin: "0.7rem 0rem" }}
                     >
-                      By signing up, you agree to S2 Boutique's
+                      By signing up, you agree to WebVilla's
                       <button
                         className="btn btn-link p-0 ml-1"
                         style={{ fontSize: "0.75rem" }}
@@ -336,7 +336,7 @@ const Login = (props) => {
                   </div>
 
                   <p style={{ fontSize: "1rem", margin: "0.7rem 0rem" }}>
-                    Already have account?
+                    Already have an account?
                     <button
                       onClick={setLoginDisplayTrue}
                       className="btn btn-link p-0 text-success-s2 ml-1"

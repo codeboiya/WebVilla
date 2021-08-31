@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import mainBg from "../../assets/mainBackground.png";
 import logo from "../../assets/complogo.png";
 import Footer from "./Footer";
+import './css/footer.css';
 import Feedback from "./feedback";
 import Carousel from "./Carousel";
 import ProductField from "./Products";
@@ -37,19 +38,19 @@ const Index = (props) => {
   }
 
   const noLoginCartNotification = () => {
-    toast.error("Please login first to continue.", {
+    toast.error("Please login first to continue", {
       position: toast.POSITION.TOP_CENTER,
     });
   };
 
   const comingSoonNotification = () => {
-    toast.success("This Feature will coming soon, Stay tune!", {
+    toast.success("This feature will come soon, Stay tuned!", {
       position: toast.POSITION.TOP_CENTER,
     });
   };
 
   const searchNotification = () => {
-    toast.success("Discover the clothe that you search below.", {
+    toast.success("Discover the clothing item that you searched for below", {
       position: toast.POSITION.TOP_CENTER,
     });
   };
@@ -90,7 +91,10 @@ const Index = (props) => {
     return {
       backgroundImage: `url(${image})`,
       backgroundSize: "cover",
+      backgroundRepeat: 'no - repeat',
+      backgroundAttachment: 'fixed',
       backgroundPosition: "center",
+      height: '100%',
     };
   };
 
@@ -108,10 +112,10 @@ const Index = (props) => {
                 params={{
                     particles: {
                         number: {
-                            value: 100,
+                            value: 80,
                             density: {
                                 enable: 'true',
-                                value_area: 1000
+                                value_area: 600
                             }
                         },
                         color: {
@@ -219,7 +223,7 @@ const Index = (props) => {
                     
                 }style={{
                     position: 'fixed', width: '100%', height: '100%', background: 'linear-gradient(to bottom, rgba(117, 114, 113, 0.8) 10%, rgba(40, 49, 77, 0.8) 30%, rgba(29, 35, 71, 0.8) 50%, rgba(19, 25, 28, 0.8) 80%, rgba(15, 14, 14, .8) 100%), url(https://38.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif)',backgroundSize: 'cover',backgroundPosition: '50% 50%',
-                    backgroundRepeat: 'repeat',top: '0', display: 'block',verticalAlign:'bottom'}}/>
+                    backgroundRepeat: 'repeat',top: '0', display: 'block',zIndex:'0',verticalAlign:'bottom'}}/>
 
       
       {/* This is the carousel part */}
@@ -229,7 +233,7 @@ const Index = (props) => {
 
       {/* start header - part1 */}
       <div className="main-bg-height" style={picture(mainBg)}>
-        <nav className="navbar static-top navbar-transparent navbar-expand-lg navbar-light">
+        <nav className="navbar static-top navbar-transparent navbar-expand-lg navbar-light" >
           <div className="container">
             <a className="navbar-brand" href="/">
               <img src={logo} className="logo-fx" alt="..." />
@@ -241,7 +245,7 @@ const Index = (props) => {
               data-target="#navbarNav"
               aria-controls="navbarNav"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Toggle navigation" 
             >
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -253,29 +257,32 @@ const Index = (props) => {
                                 <FontAwesomeIcon icon={faHome} className="mr-2" />
                                 Home <span className="sr-only">(current)</span></Link>
 
-                            </li>
+              </li>
 
               <li className="nav-item">
                                 <Link to="/feedback" exact className="nav-link mr-4"><FontAwesomeIcon icon={faUser} className="mr-2" />Feedback</Link>
-                            </li>
+              </li>
 
-                            <form className="form-inline ">
-                                <input className="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search" />
+                            {/* <form className="form-inline mb-3">
+                                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                                <br/><br/><br/>
                                 <button className="btn btn-outline-success mr-2" type="submit">
                                     <FontAwesomeIcon icon={faSearch} className="mr-2" />Search</button>
-                            </form>
+                            </form> */}
                 {props.tokenUser ? (
+                  <li className="nav-item mb-2 mr-3">
                   <Link to="/cart" style={{ textDecoration: "none" }}>
-                    <li className="nav-item">
+                    
                       <button className="btn btn-success d-flex d-row">
                         
                         <p className="my-0"><FontAwesomeIcon icon={faShoppingCart} 
                         className="align-self-center mr-2"/> Cart : {props.dataCart.length}</p>
                       </button>
+                    </Link>
                     </li>
-                  </Link>
+                  
                 ) : (
-                  <li className="nav-item">
+                  <li className="nav-item mb-2 mr-3">
                     <button
                       onClick={() => noLoginCartNotification()}
                       className="btn btn-secondary d-flex d-row"
@@ -287,7 +294,7 @@ const Index = (props) => {
                   </li>
                 )}
 
-                <li className="nav-item mx-4">
+                <li className="nav-item">
                   {NavLoginSuccess ? (
                     <div className="btn-group">
                       <button
@@ -329,7 +336,8 @@ const Index = (props) => {
             </div>
           </div>
         </nav>
-        <div className="container">
+        {/* <div className="container mt-4">
+        
                 <div className="carousel ">
                     <div className="carousel__face"><span className="car_text">This is something</span></div>
                     <div className="carousel__face"><span className="car_text">Very special</span></div>
@@ -341,27 +349,50 @@ const Index = (props) => {
                     <div className="carousel__face"><span className="car_text">How IT Works</span></div>
                     <div className="carousel__face"><span className="car_text">Woow</span></div>
                 </div>
-            </div>
+            </div> */}
 
         <ToastContainer />
 
-        <div className="vertical-center ">
+        <div className="container">
+          <div className="row mt-2 mb-2">
+            <div className="col-md-4 justify-content-center"></div>
+            
+            
+            <div className="col-md-4 justify-content-end mx-auto">
+              <div className="carousel">
+                <div className="carousel__face"><span className="car_text">This is something</span></div>
+                <div className="carousel__face"><span className="car_text">Very special</span></div>
+                <div className="carousel__face"><span className="car_text">Special is the key</span></div>
+                <div className="carousel__face"><span className="car_text">For you</span></div>
+                <div className="carousel__face"><span className="car_text">Just give it</span></div>
+                <div className="carousel__face"><span className="car_text">A try</span></div>
+                <div className="carousel__face"><span className="car_text">And see</span></div>
+                <div className="carousel__face"><span className="car_text">How IT Works</span></div>
+                <div className="carousel__face"><span className="car_text">Woow</span></div>
+              </div>
+            </div>
+            <div className="col-md-4 justify-content-center"></div>
+            </div>
+            <div className="row mt-5">
+             <div className="col-md-2"></div> 
+            <div className="col-md-8 justify-content-evenly mt-2">
+        {/* <div className="vertical-center "> */}
         <p>
 
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-        <br /> <br /> <br /> <br />
+                <br /> <br /> <br /> <br /> <br /> <br /> 
         </p>
-          <h1
-            className="display-4 font-weight-bold text-center"
+          <h3
+            className="display-4 font-weight-bold text-center mt-5"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
-            Shop Elegant & Fantastic Fashions!
-          </h1>
+            Shop Elegant & Fantastic Fashion!
+          </h3>
           <p className="text-center text-secondary ">
             Ready to wear dresses tailored for you from online. Hurry up while
             stock lasts.
           </p>
-          {/* <div className="input-group mt-5">
+        {/* </div> */}
+          <div className="input-group mt-3">
             <input
               type="text"
               className="form-control py-4"
@@ -382,23 +413,32 @@ const Index = (props) => {
                 <i className="fas fa-search"></i>
               </button>
             </div>
-          </div> */}
-        </div>
-      </div>
+            </div>
+            </div>
+            <div className="col-md-2 mb-5"></div>
+          </div>
+       
+      
       {/* start header - part 1 */}
 
       {/* carousel-brochure */}
-      <div className="container my-5">
-        <Carousel />
-      </div>
+      {/* <div className="container mt-5"> */}
+        <div className="row">
+          <div className="col-md-2"></div>
+            <div className="col-md-8 justify-content-left">
+        <Carousel/>
+        </div>
+            <div className="col-md-2"></div>
+        </div>
+      {/* </div> */}
       {/* carousel-brochure */}
 
       {/* part 3 - content */}
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="row mb-5">
-          {/* Sidebar */}
-          <div className="col-md-3 mt-3">
-            <div className="list-group">
+          
+          {/* <div className="col-md-3 mt-3">
+             <div className="list-group">
               <h5 className="ml-3 text-secondary font-weight-bold mb-3">
                 Gender
               </h5>
@@ -457,25 +497,26 @@ const Index = (props) => {
                 <i className="fas fa-circle mr-5 fa-sm align-self-center"></i>
                 Outer Wear
               </button>
-            </div>
-          </div>
-          {/* Sidebar */}
-
-          <div className="col-md-9">
+            </div> 
+          </div> */}
+          
+          <div className="col-md-2"></div>
+          <div className="col-md-8 mt-5">
             <ProductField
               searchInput={searchInput}
               submitSearch={submitSearch}
             />
           </div>
+          <div className="col-md-2"></div>
         </div>
-      </div>
-      {/* part 3 - content */}
+      {/* </div> */}
+        </div>
 
       {/* Footer */}
-      <hr className="horizontal-line" />
-      <Footer />
+      {/* <hr className="horizontal-line" /> */}
+      <Footer/>
       {/* Footer */}
-
+        
       {/* Modals */}
       <LoginModal
         showLoginModal={showLoginModal}
@@ -488,6 +529,8 @@ const Index = (props) => {
       />
       {/* Modals */}
     </div>
+    </div>
+    
   );
 };
 const mapStateToProps = (state) => {

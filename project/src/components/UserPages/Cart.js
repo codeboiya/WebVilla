@@ -116,7 +116,7 @@ const Cart = (props) => {
                       </div>
                     </td>
                     <th style={{ verticalAlign: "middle" }}>
-                      <p className="my-0 text-secondary">${item.price}</p>
+                      <p className="my-0 text-secondary">₦{(item.price)*500}</p>
                     </th>
                     <td>
                       <div className="btn-group" role="group" aria-label="...">
@@ -143,7 +143,8 @@ const Cart = (props) => {
                     <td>
                       <div className="d-flex d-row">
                         <h6 className="font-weight-bold text-secondary align-self-center my-0">
-                          ${item.price * item.qtyBuy}
+                          ₦{(item.price*500) * item.qtyBuy}
+                        
                         </h6>
                         <button
                           className="btn trash-cart-btn ml-2"
@@ -178,15 +179,15 @@ const Cart = (props) => {
               <div className="border border-top-0">
                 <div className="border-top d-flex d-row py-3 px-3">
                   <h6 className="font-weight-bold my-0">Subtotal</h6>
-                  <h6 className="ml-auto my-0">${props.subTotalPrice}</h6>
+                  <h6 className="ml-auto my-0">₦{props.subTotalPrice * 500}</h6>
                 </div>
                 <div className="border-top d-flex d-row py-3 px-3">
                   <h6 className="font-weight-bold my-0">Shipping</h6>
-                  <h6 className="ml-auto my-0">$5</h6>
+                  <h6 className="ml-auto my-0">₦1000</h6>
                 </div>
                 <div className="border-top d-flex d-row py-3 px-3">
                   <h6 className="font-weight-bold my-0">Total</h6>
-                  <h6 className="ml-auto my-0">${props.subTotalPrice + 5}</h6>
+                  <h6 className="ml-auto my-0">₦{(props.subTotalPrice*500) + 1000}</h6>
                 </div>
               </div>
               <div className="d-flex">

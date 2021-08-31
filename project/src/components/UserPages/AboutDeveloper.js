@@ -22,16 +22,16 @@ const AboutDeveloper = (props) => {
           </div>
           <div>
             <h4 className="mt-3 mb-0 font-weight-bold text-center">
-              Chen Frederick
+              New Horizons
             </h4>
             <div className="d-flex justify-content-center">
-              <small className="text-secondary">Developer of S2 Boutique</small>
+              <small className="text-secondary">Developer of WebVilla</small>
             </div>
             <div className="d-flex justify-content-center mt-3">
               <a
                 className="btn btn-outline-github rounded-circle px-2 pt-2 mr-2"
                 style={{ width: "2.5rem", height: "2.5rem" }}
-                href="https://github.com/Frederick-88"
+                href="https://github.com/anjielayo"
                 target="blank"
               >
                 <i className="fab fa-github" />
@@ -39,7 +39,7 @@ const AboutDeveloper = (props) => {
               <a
                 className="btn btn-outline-primary rounded-circle px-2 pt-2 mr-2"
                 style={{ width: "2.5rem", height: "2.5rem" }}
-                href="https://www.linkedin.com/in/chen-frederick-1324301a8/"
+                href="https://www.linkedin.com/in/anjolaoluwa-olutomilayo/"
                 target="blank"
               >
                 <i className="fab fa-linkedin" />
@@ -51,23 +51,17 @@ const AboutDeveloper = (props) => {
                 type="button"
                 data-toggle="tooltip"
                 data-placement="top"
-                title="Frederick@fdtech.asia"
+                title="anjolaolutomilayo@gmail.com"
               >
                 <i className="far fa-envelope" />
               </button>
             </div>
           </div>
           <p className="mt-3 text-justify text-secondary">
-            Frederick is an enthusiastic and passionate person who empower
-            learning and hardwork is the key to deliver quality in advance, So
-            he always give maximum effort in his works.
+            WebVilla is developed by Group 1 of the New Horizons Web Development class.
             <br />
             <br />
-            He is a MERN Fullstack Javascript Developer who thrives in
-            fast-paced environment, keen to learn and pay attention to detail.
-            Recently, he is focusing to develop his skills as a Fullstack
-            Developer and continuing to sharpen & improve more skills to be a
-            better Developer and deliver better quality to society.
+            
           </p>
         </div>
       </Modal.Body>
