@@ -253,7 +253,7 @@ const Footer=()=>{
                       </div>
                       <div className="col-md-12">
                           <div className="py-4 d-flex justify-content-center align-items-center">
-                              <a className="mr-4">Copyright © 2021, All Right Reserved WebVilla</a>
+                              <a className="mr-4">Copyright © 2021, All Rights Reserved WebVilla</a>
                               <a className="mr-4" href="#">Home</a>
                               <a className="mr-4" href="#">Privacy Policy</a>
                               <a className="mr-4" href="#">Terms &amp; Conditions</a>
